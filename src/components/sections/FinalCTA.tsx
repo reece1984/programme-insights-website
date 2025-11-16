@@ -24,7 +24,7 @@ export const FinalCTA: React.FC = () => {
           </p>
           <a href="https://app.programmeinsights.co.uk/signup">
             <Button variant="primary" size="lg">
-              Get Started Free
+              Schedule Consultation
             </Button>
           </a>
         </motion.div>

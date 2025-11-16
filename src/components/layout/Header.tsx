@@ -67,7 +67,7 @@ export const Header: React.FC = () => {
             </a>
             <a href="https://app.programmeinsights.co.uk/signup">
               <Button variant="primary" size="sm">
-                Get Started
+                Schedule Consultation
               </Button>
             </a>
           </nav>
@@ -105,7 +105,7 @@ export const Header: React.FC = () => {
               <div className="px-4 pt-2">
                 <a href="https://app.programmeinsights.co.uk/signup">
                   <Button variant="primary" size="sm" className="w-full">
-                    Get Started
+                    Schedule Consultation
                   </Button>
                 </a>
               </div>

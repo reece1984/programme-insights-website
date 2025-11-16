@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Default theme colors (Deep Blue & Teal) */
+  --color-primary: #1e40af;
+  --color-dark-primary: #1e3a8a;
+  --color-accent: #06b6d4;
+  --color-light-grey: #f8f9fa;
+  --color-medium-grey: #e5e7eb;
+  --color-hero-override: null;
+
+  --font-family-serif: 'Merriweather', Georgia, serif;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Theme overrides */
+[data-theme="deepblue"] {
+  --color-primary: #1e40af;
+  --color-dark-primary: #1e3a8a;
+  --color-accent: #06b6d4;
+  --color-accent-hover: #0891b2;
+}
+
+[data-theme="slate"] {
+  --color-primary: #475569;
+  --color-dark-primary: #334155;
+  --color-accent: #f59e0b;
+  --color-accent-hover: #d97706;
+}
+
+[data-theme="steel"] {
+  --color-primary: #64748b;
+  --color-dark-primary: #475569;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+}
+
+[data-theme="graphite"] {
+  --color-primary: #3b4451;
+  --color-dark-primary: #252b35;
+  --color-accent: #b87333;
+  --color-accent-hover: #9a5f2a;
+}
+
+[data-theme="graphite-light"] {
+  --color-primary: #3b4451;
+  --color-dark-primary: #f5f3f0;
+  --color-accent: #b87333;
+  --color-accent-hover: #9a5f2a;
+  --color-hero-override: #f5f3f0;
+}
+
+[data-theme="oxford"] {
+  --color-primary: #002147;
+  --color-dark-primary: #f1f5f9;
+  --color-accent: #002147;
+  --color-accent-hover: #001229;
+  --color-hero-override: #f1f5f9;
+}
+
+[data-theme="claude"] {
+  --color-primary: #1e3a5f;
+  --color-dark-primary: #f5f3f0;
+  --color-accent: #0f766e;
+  --color-accent-hover: #0d5f54;
+  --color-hero-override: #f5f3f0;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-family-sans);
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-serif);
+  }
+}
+
+@layer components {
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  .container-custom {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  /* H1 - Hero headline: 56px desktop / 36px mobile */
+  .heading-xl {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 1024px) {
+    .heading-xl {
+      font-size: 3.5rem; /* 56px */
+    }
+  }
+
+  /* H2 - Section headlines: 40px desktop / 32px mobile */
+  .heading-lg {
+    font-size: 2rem; /* 32px */
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 1024px) {
+    .heading-lg {
+      font-size: 2.5rem; /* 40px */
+    }
+  }
+
+  /* H3 - Module names: 32px desktop / 28px mobile */
+  .heading-md {
+    font-size: 1.75rem; /* 28px */
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 1024px) {
+    .heading-md {
+      font-size: 2rem; /* 32px */
+    }
+  }
+
+  .heading-sm {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    .heading-sm {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Body text: 18px */
+  .body-lg {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75;
+  }
+
+  .body-base {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75;
+  }
+
+  /* Small text: 16px */
+  .text-sm {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5;
+  }
+
+  /* Section labels: 12px, uppercase, letter-spacing */
+  .section-label {
+    font-size: 0.75rem; /* 12px */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+  }
+}
+
+@layer utilities {
+  .bg-theme-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-theme-dark {
+    background-color: var(--color-dark-primary);
+  }
+
+  .bg-theme-accent {
+    background-color: var(--color-accent);
+  }
+
+  .text-theme-accent {
+    color: var(--color-accent);
+  }
+
+  .text-theme-primary {
+    color: var(--color-primary);
+  }
+
+  .border-theme-accent {
+    border-color: var(--color-accent);
+  }
+
+  .border-theme-primary {
+    border-color: var(--color-primary);
+  }
+
+  .hover\:bg-theme-accent:hover {
+    background-color: var(--color-accent-hover);
+  }
+
+  .hover\:bg-theme-primary:hover {
+    background-color: var(--color-primary);
+  }
+
+  .hover\:text-theme-accent:hover {
+    color: var(--color-accent);
+  }
+
+  /* Transitions */
+  .transition-colors {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .transition-all {
+    transition: all 0.2s ease;
+  }
+
+  /* Focus states for accessibility */
+  .focus-visible\:ring-accent:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  /* Hero section theming */
+  .hero-bg {
+    background-color: var(--color-dark-primary);
+  }
+
+  [data-theme="oxford"] .hero-bg {
+    background-color: var(--color-hero-override);
+  }
+
+  .hero-text {
+    color: white;
+  }
+
+  [data-theme="oxford"] .hero-text {
+    color: var(--color-primary);
+  }
+
+  [data-theme="oxford"] .hero-text .text-gray-200 {
+    color: #475569;
+  }
+
+  [data-theme="oxford"] .hero-text .border-gray-700 {
+    border-color: #cbd5e1;
+  }
+
+  /* Header text override for light themes - exclude buttons */
+  [data-theme="oxford"] header:not(.bg-white) .text-white:not(button):not(button *),
+  [data-theme="claude"] header:not(.bg-white) .text-white:not(button):not(button *) {
+    color: var(--color-primary) !important;
+  }
+
+  /* Claude theme specifics */
+  [data-theme="claude"] .hero-bg {
+    background-color: var(--color-hero-override);
+  }
+
+  [data-theme="claude"] .hero-text {
+    color: var(--color-primary);
+  }
+
+  [data-theme="claude"] .hero-text .text-gray-200 {
+    color: #475569;
+  }
+
+  [data-theme="claude"] .hero-text .border-gray-700 {
+    border-color: #cbd5e1;
+  }
+
+  [data-theme="claude"] header:not(.bg-white) .text-white:not(button):not(button *) {
+    color: var(--color-primary) !important;
+  }
+
+  /* Button text override for light themes */
+  [data-theme="oxford"] .bg-theme-accent,
+  [data-theme="claude"] .bg-theme-accent,
+  [data-theme="oxford"] button.bg-theme-accent,
+  [data-theme="claude"] button.bg-theme-accent {
+    color: white !important;
+  }
+
+  /* Header button text specifically - highest priority */
+  [data-theme="oxford"] header button,
+  [data-theme="claude"] header button,
+  [data-theme="oxford"] header button.text-white,
+  [data-theme="claude"] header button.text-white,
+  [data-theme="oxford"] header .text-white button,
+  [data-theme="claude"] header .text-white button {
+    color: white !important;
+  }
+
+  /* Override hardcoded colors for Claude theme */
+  [data-theme="claude"] .bg-navy-primary,
+  [data-theme="claude"] .bg-theme-primary {
+    background-color: var(--color-primary);
+  }
+
+  [data-theme="claude"] .text-navy-primary {
+    color: var(--color-primary);
+  }
+
+  [data-theme="claude"] .text-teal-accent,
+  [data-theme="claude"] .text-theme-accent {
+    color: var(--color-accent);
+  }
+
+  [data-theme="claude"] .bg-light-grey {
+    background-color: #faf9f7;
+  }
+
+  /* Oxford theme color overrides */
+  [data-theme="oxford"] .bg-navy-primary,
+  [data-theme="oxford"] .bg-theme-primary {
+    background-color: var(--color-primary);
+  }
+
+  [data-theme="oxford"] .text-navy-primary {
+    color: var(--color-primary);
+  }
+
+  [data-theme="oxford"] .text-teal-accent,
+  [data-theme="oxford"] .text-theme-accent {
+    color: var(--color-accent);
+  }
+
+  [data-theme="oxford"] .bg-light-grey {
+    background-color: #faf9f7;
+  }
+
+  /* Graphite Light theme - light hero with copper accents throughout */
+  [data-theme="graphite-light"] .hero-bg {
+    background-color: var(--color-hero-override);
+  }
+
+  [data-theme="graphite-light"] .hero-text {
+    color: var(--color-primary);
+  }
+
+  [data-theme="graphite-light"] .hero-text .text-gray-200 {
+    color: #475569;
+  }
+
+  [data-theme="graphite-light"] .hero-text .border-gray-700 {
+    border-color: #cbd5e1;
+  }
+
+  [data-theme="graphite-light"] header:not(.bg-white) .text-white:not(button):not(button *) {
+    color: var(--color-primary) !important;
+  }
+
+  [data-theme="graphite-light"] .bg-theme-accent,
+  [data-theme="graphite-light"] button.bg-theme-accent {
+    color: white !important;
+  }
+
+  [data-theme="graphite-light"] header button,
+  [data-theme="graphite-light"] header button.text-white,
+  [data-theme="graphite-light"] header .text-white button {
+    color: white !important;
+  }
+
+  [data-theme="graphite-light"] .bg-navy-primary,
+  [data-theme="graphite-light"] .bg-theme-primary {
+    background-color: var(--color-primary);
+  }
+
+  [data-theme="graphite-light"] .text-navy-primary {
+    color: var(--color-primary);
+  }
+
+  [data-theme="graphite-light"] .text-teal-accent,
+  [data-theme="graphite-light"] .text-theme-accent {
+    color: var(--color-accent);
+  }
+
+  [data-theme="graphite-light"] .bg-light-grey {
+    background-color: #faf9f7;
+  }
+
+  [data-theme="graphite-light"] .bg-navy-primary {
+    background-color: #2d3748;
+  }
+
+  /* Graphite theme - dark sections with copper accents */
+  [data-theme="graphite"] .bg-navy-primary {
+    background-color: #2d3748;
+  }
+
+  [data-theme="graphite"] .section-label {
+    color: var(--color-accent);
+  }
+}

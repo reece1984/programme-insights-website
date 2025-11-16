@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Base theme configuration */
+@theme {
+  --font-family-serif: 'Merriweather', Georgia, serif;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Charcoal & Teal Theme */
+[data-theme="charcoal"] {
+  --color-primary: #2c3e50;
+  --color-dark-primary: #1a252f;
+  --color-accent: #14b8a6;
+  --color-light-grey: #f8f9fa;
+  --color-medium-grey: #e5e7eb;
+}
+
+/* Forest Green & Gold Theme */
+[data-theme="forest"] {
+  --color-primary: #1e4620;
+  --color-dark-primary: #0f2610;
+  --color-accent: #d4af37;
+  --color-light-grey: #f8f9fa;
+  --color-medium-grey: #e5e7eb;
+}
+
+/* Slate Blue & Amber Theme */
+[data-theme="slate"] {
+  --color-primary: #475569;
+  --color-dark-primary: #334155;
+  --color-accent: #f59e0b;
+  --color-light-grey: #f8f9fa;
+  --color-medium-grey: #e5e7eb;
+}
+
+/* Deep Burgundy & Cream Theme */
+[data-theme="burgundy"] {
+  --color-primary: #6b1d3d;
+  --color-dark-primary: #4a1428;
+  --color-accent: #c5a572;
+  --color-light-grey: #f8f9fa;
+  --color-medium-grey: #e5e7eb;
+}
+
+/* Graphite & Copper Theme */
+[data-theme="graphite"] {
+  --color-primary: #3b4451;
+  --color-dark-primary: #252b35;
+  --color-accent: #b87333;
+  --color-light-grey: #f8f9fa;
+  --color-medium-grey: #e5e7eb;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-family-sans);
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-serif);
+  }
+}
+
+@layer components {
+  .section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  .container-custom {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .heading-xl {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    .heading-xl {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .heading-xl {
+      font-size: 3.75rem;
+    }
+  }
+
+  .heading-lg {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    .heading-lg {
+      font-size: 2.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .heading-lg {
+      font-size: 3rem;
+    }
+  }
+
+  .heading-md {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    .heading-md {
+      font-size: 1.875rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .heading-md {
+      font-size: 2.25rem;
+    }
+  }
+
+  .heading-sm {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 768px) {
+    .heading-sm {
+      font-size: 1.5rem;
+    }
+  }
+
+  .body-lg {
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+
+  @media (min-width: 768px) {
+    .body-lg {
+      font-size: 1.25rem;
+    }
+  }
+
+  .body-base {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  @media (min-width: 768px) {
+    .body-base {
+      font-size: 1.125rem;
+    }
+  }
+
+  /* Theme-aware color utilities */
+  .bg-theme-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-theme-dark {
+    background-color: var(--color-dark-primary);
+  }
+
+  .bg-theme-accent {
+    background-color: var(--color-accent);
+  }
+
+  .text-theme-accent {
+    color: var(--color-accent);
+  }
+
+  .border-theme-accent {
+    border-color: var(--color-accent);
+  }
+}

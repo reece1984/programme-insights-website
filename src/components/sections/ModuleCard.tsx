@@ -10,6 +10,7 @@ interface ModuleCardProps {
   description: string;
   features: string[];
   imagePosition: 'left' | 'right';
+  imageSrc?: string;
 }
 
 export const ModuleCard: React.FC<ModuleCardProps> = ({
@@ -20,6 +21,7 @@ export const ModuleCard: React.FC<ModuleCardProps> = ({
   description,
   features,
   imagePosition,
+  imageSrc,
 }) => {
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -53,11 +55,19 @@ export const ModuleCard: React.FC<ModuleCardProps> = ({
         </ul>
       </div>
 
-      {/* Screenshot Placeholder */}
+      {/* Screenshot */}
       <div className={imagePosition === 'right' ? 'md:order-2' : 'md:order-1'}>
-        <div className="aspect-video bg-light-grey rounded-lg shadow-sm flex items-center justify-center">
-          <p className="text-gray-500 font-medium">{title} Screenshot</p>
-        </div>
+        {imageSrc ? (
+          <img
+            src={imageSrc}
+            alt={`${title} Screenshot`}
+            className="aspect-video bg-light-grey rounded-lg shadow-sm object-cover w-full"
+          />
+        ) : (
+          <div className="aspect-video bg-light-grey rounded-lg shadow-sm flex items-center justify-center">
+            <p className="text-gray-500 font-medium">{title} Screenshot</p>
+          </div>
+        )}
       </div>
     </motion.div>
   );

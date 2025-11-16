@@ -19,12 +19,14 @@ export const FinalCTA: React.FC = () => {
             Ready to Transform Your Programme Assurance?
           </h2>
           <p className="body-lg text-gray-200 mb-8">
-            Schedule a consultation with our team to discover how Programme Insights can reduce your
-            gateway review preparation time and increase your chances of success.
+            Start using Programme Insights today to reduce your gateway review preparation time
+            and increase your chances of success.
           </p>
-          <Button variant="primary" size="lg">
-            Schedule Consultation
-          </Button>
+          <a href="https://app.programmeinsights.co.uk/signup">
+            <Button variant="primary" size="lg">
+              Get Started Free
+            </Button>
+          </a>
         </motion.div>
       </Container>
     </section>

@@ -23,12 +23,16 @@ export const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button variant="primary" size="lg">
-              Schedule Consultation
-            </Button>
-            <Button variant="secondary" size="lg">
-              Explore Platform
-            </Button>
+            <a href="https://app.programmeinsights.co.uk/signup">
+              <Button variant="primary" size="lg">
+                Get Started Free
+              </Button>
+            </a>
+            <a href="#platform">
+              <Button variant="secondary" size="lg">
+                Explore Platform
+              </Button>
+            </a>
           </div>
 
           {/* Trust Bar */}

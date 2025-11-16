@@ -57,9 +57,19 @@ export const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="primary" size="sm">
-              Schedule Consultation
-            </Button>
+            <a
+              href="https://app.programmeinsights.co.uk/login"
+              className={`font-medium transition-colors hover:text-theme-accent ${
+                isScrolled || isSolidHeaderPage ? 'text-gray-700' : 'text-white'
+              }`}
+            >
+              Login
+            </a>
+            <a href="https://app.programmeinsights.co.uk/signup">
+              <Button variant="primary" size="sm">
+                Get Started
+              </Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -85,10 +95,19 @@ export const Header: React.FC = () => {
                   {link.name}
                 </a>
               ))}
+              <a
+                href="https://app.programmeinsights.co.uk/login"
+                className="text-gray-700 font-medium hover:text-theme-accent transition-colors px-4"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Login
+              </a>
               <div className="px-4 pt-2">
-                <Button variant="primary" size="sm" className="w-full">
-                  Schedule Consultation
-                </Button>
+                <a href="https://app.programmeinsights.co.uk/signup">
+                  <Button variant="primary" size="sm" className="w-full">
+                    Get Started
+                  </Button>
+                </a>
               </div>
             </nav>
           </div>

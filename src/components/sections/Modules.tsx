@@ -18,6 +18,7 @@ export const Modules: React.FC = () => {
         'Real-time readiness scoring and trend analysis',
       ],
       imagePosition: 'right' as const,
+      imageSrc: '/gateway-success-screenshot.png',
     },
     {
       badge: 'coming-soon' as const,

@@ -25,9 +25,7 @@ export const GatewayCredibility: React.FC = () => {
         </h2>
 
         <p className="body-lg text-center text-gray-700 mb-16 max-w-4xl mx-auto">
-          Gateway Success was born from 15+ years of infrastructure megaproject experience.
-          We've prepared for reviews at HS2 and GDF. We've sat on both sides of the table.
-          We know what reviewers look for—because we've been them.
+          Born from 15+ years of infrastructure megaproject experience. We've prepared reviews at HS2 and GDF. We've sat on both sides of the table.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

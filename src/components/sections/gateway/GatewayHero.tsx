@@ -13,7 +13,7 @@ export const GatewayHero: React.FC = () => {
       <Container className="py-32 md:py-40">
         <div className="max-w-4xl mx-auto text-center hero-text">
           <h1 className="heading-xl mb-6">
-            Never Face Another Surprise RED Rating
+            Approach your Gateway Reviews with Confidence
           </h1>
           <p className="body-lg text-gray-200 mb-8 max-w-3xl mx-auto">
             Gateway Success predicts your review outcome 90 days in advance—and shows you exactly how to achieve GREEN
@@ -22,7 +22,7 @@ export const GatewayHero: React.FC = () => {
             Built by practitioners who've been on both sides of the review table
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="primary"
               size="lg"
@@ -37,13 +37,6 @@ export const GatewayHero: React.FC = () => {
             >
               Watch 2-Minute Demo
             </Button>
-          </div>
-
-          {/* Trust Signal */}
-          <div className="pt-12 border-t border-gray-700">
-            <p className="text-sm font-medium">
-              Trusted by 3 Major UK Infrastructure Projects
-            </p>
           </div>
         </div>
       </Container>

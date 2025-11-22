@@ -11,11 +11,11 @@ export const SuccessVision: React.FC = () => {
 
         <div className="max-w-4xl mx-auto text-center">
           <p className="body-lg text-gray-700 mb-6">
-            Achieve GREEN ratings consistently. Sleep soundly before every gateway review. Walk into reviews with complete confidence, knowing exactly where you stand.
+            Achieve GREEN ratings consistently. Walk into reviews with complete confidence.
           </p>
 
           <p className="body-lg text-gray-700 mb-8">
-            Imagine knowing your gateway outcome 90 days in advance. No surprises. No panic. No weekend scrambles. Just calm, continuous readiness and predictable success.
+            Know your gateway outcome 90 days in advance. No surprises. No panic. No weekend scrambles.
           </p>
 
           <p className="text-xl font-bold text-theme-primary mb-8">

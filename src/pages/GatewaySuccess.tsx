@@ -7,7 +7,6 @@ import { ConfidentExperience } from '../components/sections/gateway/ConfidentExp
 import { Features } from '../components/sections/gateway/Features';
 import { ROICalculator } from '../components/sections/gateway/ROICalculator';
 import { GatewayCredibility } from '../components/sections/gateway/GatewayCredibility';
-import { Pricing } from '../components/sections/gateway/Pricing';
 import { Comparison } from '../components/sections/gateway/Comparison';
 import { Guarantee } from '../components/sections/gateway/Guarantee';
 import { GatewayFinalCTA } from '../components/sections/gateway/GatewayFinalCTA';
@@ -23,7 +22,6 @@ export const GatewaySuccess: React.FC = () => {
       <Features />
       <ROICalculator />
       <GatewayCredibility />
-      <Pricing />
       <Comparison />
       <Guarantee />
       <GatewayFinalCTA />

@@ -7,19 +7,19 @@ export const SolutionOverview: React.FC = () => {
       title: 'PREDICT',
       subtitle: 'Your AI-Powered Crystal Ball',
       timeframe: '(Week 1)',
-      description: 'Know your likely rating 90+ days before reviewers arrive. Upload your evidence and receive your predicted rating within 24 hours. Our machine learning model, trained on hundreds of reviews, shows you exactly where you stand—updated daily.'
+      description: 'Know your likely rating 90+ days before reviewers arrive. Upload evidence, receive your predicted rating within 24 hours. Updated daily.'
     },
     {
       title: 'PREPARE',
       subtitle: 'Evidence That Actually Matters',
       timeframe: '(Ongoing)',
-      description: 'Stop guessing what reviewers want. Gateway Success maps your evidence to IPA criteria, showing gaps and staleness. Follow your personalised roadmap and watch your readiness score climb daily. Get alerts when evidence needs refreshing.'
+      description: 'Stop guessing what reviewers want. See gaps and staleness mapped to IPA criteria. Follow your roadmap, watch your score climb daily.'
     },
     {
       title: 'PERFORM',
       subtitle: 'Practice Makes Perfect',
       timeframe: '(90 Days)',
-      description: 'Face AI reviewers modeled on real panel archetypes. Practice your defense, refine your answers, and walk into reviews knowing you\'ll succeed. You\'ve practiced the questions. You\'ve filled the gaps. GREEN is inevitable.'
+      description: 'Face AI reviewers modeled on real panels. Practice your defense, refine answers. GREEN is inevitable.'
     }
   ];
 
@@ -30,7 +30,7 @@ export const SolutionOverview: React.FC = () => {
           Continuous Readiness, Not Panicked Preparation
         </h2>
         <p className="body-lg text-center text-gray-700 mb-16 max-w-3xl mx-auto">
-          Gateway Success transforms reviews from Russian roulette into predictable processes
+          Transform reviews from Russian roulette into predictable processes
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

@@ -5,15 +5,15 @@ export const ConfidentExperience: React.FC = () => {
   const timeline = [
     {
       title: '90 Days Before',
-      description: 'You open Gateway Success and see your predicted rating: AMBER trending to GREEN. Your roadmap shows exactly what needs attention. No panic—just a clear plan.'
+      description: 'Open Gateway Success. See your rating: AMBER trending to GREEN. Your roadmap shows what needs attention. No panic—just a clear plan.'
     },
     {
       title: '30 Days Before',
-      description: 'Your readiness score has climbed from 68% to 89%. Evidence gaps are closed. You\'ve practiced with AI reviewers and refined your answers. You\'re ready.'
+      description: 'Readiness climbed from 68% to 89%. Evidence gaps closed. You\'ve practiced with AI reviewers. You\'re ready.'
     },
     {
       title: 'Review Day',
-      description: 'You walk in calm and confident. Every question was anticipated. Every piece of evidence is fresh and relevant. The reviewers nod approvingly. GREEN is inevitable.'
+      description: 'Walk in calm and confident. Every question anticipated. Every piece of evidence fresh. Reviewers nod approvingly. GREEN is inevitable.'
     }
   ];
 

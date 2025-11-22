@@ -5,7 +5,7 @@ export const Features: React.FC = () => {
   const features = [
     {
       title: '90-Day Prediction Engine',
-      description: 'See your future rating with 85% accuracy. Updated daily based on your evidence health.'
+      description: 'See your future rating with 85% accuracy. Updated daily based on evidence health.'
     },
     {
       title: 'Evidence Decay Tracking',
@@ -17,7 +17,7 @@ export const Features: React.FC = () => {
     },
     {
       title: 'AI Review Simulator',
-      description: 'Practice with virtual reviewers. Get feedback on your answers. Build muscle memory for success.'
+      description: 'Practice with virtual reviewers. Get feedback on answers. Build muscle memory for success.'
     },
     {
       title: 'Success Pattern Library',

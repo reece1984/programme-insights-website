@@ -16,7 +16,7 @@ export const GatewayFinalCTA: React.FC = () => {
             Your Next Gateway Review Starts Today
           </h2>
           <p className="body-lg mb-12 text-gray-200">
-            Every day without Gateway Success is a day closer to an unpredictable review. Your next gateway review is coming—start preparing with confidence today.
+            Every day without Gateway Success is a day closer to an unpredictable review. Start preparing with confidence today.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

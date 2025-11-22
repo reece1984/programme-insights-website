@@ -3,7 +3,7 @@ import { Container } from '../../ui/Container';
 
 export const ROICalculator: React.FC = () => {
   const costs = [
-    { label: 'Career impact cost', value: 'Unquantifiable' },
+    { label: 'Reputation', value: 'Unquantifiable' },
     { label: 'Project delay cost', value: '£2-5M per month' },
     { label: 'Remediation cost', value: '£500K+' },
     { label: 'Team morale cost', value: '30% productivity loss' },

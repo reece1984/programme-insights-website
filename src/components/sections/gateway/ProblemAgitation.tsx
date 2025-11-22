@@ -6,17 +6,17 @@ export const ProblemAgitation: React.FC = () => {
     {
       number: '1',
       title: 'The Blind Panic',
-      description: 'You\'re 3 months from your gateway review with no idea what rating you\'ll receive. Your team works weekends preparing hundreds of documents, yet you\'re still guessing what reviewers will focus on.'
+      description: 'Three months from your review with no idea what rating you\'ll receive. Your team works weekends, yet you\'re still guessing.'
     },
     {
       number: '2',
       title: 'The Reputational Damage',
-      description: 'A RED rating doesn\'t just delay your project—it damages reputations and creates years of political fallout. You\'ll be explaining to Ministers why the programme failed, while rebuilding stakeholder confidence takes years.'
+      description: 'A RED rating creates years of political fallout. You\'ll explain to Ministers why the programme failed while stakeholder confidence takes years to rebuild.'
     },
     {
       number: '3',
       title: 'The Waste',
-      description: '£150,000+ on consultants who deliver templates, not confidence. 500+ hours of senior team time. All for a two-day review that still surprises you.'
+      description: '£150K+ on consultants who deliver templates, not confidence. 500+ hours of senior time. All for a review that still surprises you.'
     }
   ];
 

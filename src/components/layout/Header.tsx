@@ -11,6 +11,9 @@ export const Header: React.FC = () => {
   // Check if we're on a page that should have a solid header (like FAQ)
   const isSolidHeaderPage = location.pathname === '/faq';
 
+  // Check if we're on the Gateway Success page
+  const isGatewayPage = location.pathname === '/gatewaysuccess';
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -57,19 +60,29 @@ export const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
-            <a
-              href="https://app.programmeinsights.co.uk/login"
-              className={`font-medium transition-colors hover:text-theme-accent ${
-                isScrolled || isSolidHeaderPage ? 'text-gray-700' : 'text-white'
-              }`}
-            >
-              Login
-            </a>
-            <a href="https://app.programmeinsights.co.uk/signup">
-              <Button variant="primary" size="sm">
-                Schedule Consultation
-              </Button>
-            </a>
+            {!isGatewayPage && (
+              <a
+                href="https://app.programmeinsights.co.uk/login"
+                className={`font-medium transition-colors hover:text-theme-accent ${
+                  isScrolled || isSolidHeaderPage ? 'text-gray-700' : 'text-white'
+                }`}
+              >
+                Login
+              </a>
+            )}
+            {isGatewayPage ? (
+              <a href="https://app.gatewaysuccess.co.uk/signin">
+                <Button variant="primary" size="sm">
+                  Sign In to Gateway Success
+                </Button>
+              </a>
+            ) : (
+              <a href="https://app.programmeinsights.co.uk/signup">
+                <Button variant="primary" size="sm">
+                  Schedule Consultation
+                </Button>
+              </a>
+            )}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -95,19 +108,29 @@ export const Header: React.FC = () => {
                   {link.name}
                 </a>
               ))}
-              <a
-                href="https://app.programmeinsights.co.uk/login"
-                className="text-gray-700 font-medium hover:text-theme-accent transition-colors px-4"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Login
-              </a>
-              <div className="px-4 pt-2">
-                <a href="https://app.programmeinsights.co.uk/signup">
-                  <Button variant="primary" size="sm" className="w-full">
-                    Schedule Consultation
-                  </Button>
+              {!isGatewayPage && (
+                <a
+                  href="https://app.programmeinsights.co.uk/login"
+                  className="text-gray-700 font-medium hover:text-theme-accent transition-colors px-4"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Login
                 </a>
+              )}
+              <div className="px-4 pt-2">
+                {isGatewayPage ? (
+                  <a href="https://app.gatewaysuccess.co.uk/signin">
+                    <Button variant="primary" size="sm" className="w-full">
+                      Sign In to Gateway Success
+                    </Button>
+                  </a>
+                ) : (
+                  <a href="https://app.programmeinsights.co.uk/signup">
+                    <Button variant="primary" size="sm" className="w-full">
+                      Schedule Consultation
+                    </Button>
+                  </a>
+                )}
               </div>
             </nav>
           </div>

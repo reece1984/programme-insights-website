@@ -3,6 +3,7 @@ import { Header } from './components/layout/Header'
 import { Footer } from './components/layout/Footer'
 import { Home } from './pages/Home'
 import { FAQ } from './pages/FAQ'
+import { GatewaySuccess } from './pages/GatewaySuccess'
 import { ThemeWrapper } from './components/ThemeWrapper'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/gatewaysuccess" element={<GatewaySuccess />} />
           </Routes>
         </div>
         <Footer />

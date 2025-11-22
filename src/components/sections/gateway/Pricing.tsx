@@ -46,9 +46,9 @@ export const Pricing: React.FC = () => {
               variant="primary"
               size="md"
               className="w-full"
-              onClick={() => handleCTA('Start Your Free Assessment')}
+              onClick={() => handleCTA('Get Your Free Readiness Assessment')}
             >
-              Start Your Free Assessment
+              Get Your Free Readiness Assessment
             </Button>
           </div>
 

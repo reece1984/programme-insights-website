@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const isGatewayPage = location.pathname === '/gatewaysuccess';
 
   const footerLinks = {
     company: {
@@ -15,7 +18,7 @@ export const Footer: React.FC = () => {
     platform: {
       title: 'Platform',
       links: [
-        { name: 'Gateway Success', href: '/#modules' },
+        { name: 'Gateway Success', href: '/gatewaysuccess' },
         { name: 'Baseline Success', href: '/#modules' },
         { name: 'Tender Success', href: '/#modules' },
         { name: 'Risk Success', href: '/#modules' },
@@ -69,6 +72,16 @@ export const Footer: React.FC = () => {
               <span className="text-xl font-bold font-serif">Programme Insights</span>
             </div>
             <div className="text-gray-400 text-sm text-center md:text-right">
+              {isGatewayPage && (
+                <p className="mb-2">
+                  <a
+                    href="https://app.gatewaysuccess.co.uk/signin"
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    Sign In to Gateway Success
+                  </a>
+                </p>
+              )}
               <p>&copy; {currentYear} Programme Insights. All rights reserved.</p>
               <p className="mt-1">Enterprise Assurance for Major UK Infrastructure Programmes</p>
             </div>

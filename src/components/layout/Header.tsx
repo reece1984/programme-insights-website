@@ -14,6 +14,11 @@ export const Header: React.FC = () => {
   // Check if we're on the Gateway Success page
   const isGatewayPage = location.pathname === '/gatewaysuccess';
 
+  const handleCTA = () => {
+    console.log('Get Your Free Readiness Assessment');
+    alert('Get Your Free Readiness Assessment - Coming Soon');
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -71,11 +76,9 @@ export const Header: React.FC = () => {
               </a>
             )}
             {isGatewayPage ? (
-              <a href="https://app.gatewaysuccess.co.uk/signin">
-                <Button variant="primary" size="sm">
-                  Sign In to Gateway Success
-                </Button>
-              </a>
+              <Button variant="primary" size="sm" onClick={handleCTA}>
+                Get Your Free Readiness Assessment
+              </Button>
             ) : (
               <a href="https://app.programmeinsights.co.uk/signup">
                 <Button variant="primary" size="sm">
@@ -119,11 +122,9 @@ export const Header: React.FC = () => {
               )}
               <div className="px-4 pt-2">
                 {isGatewayPage ? (
-                  <a href="https://app.gatewaysuccess.co.uk/signin">
-                    <Button variant="primary" size="sm" className="w-full">
-                      Sign In to Gateway Success
-                    </Button>
-                  </a>
+                  <Button variant="primary" size="sm" className="w-full" onClick={handleCTA}>
+                    Get Your Free Readiness Assessment
+                  </Button>
                 ) : (
                   <a href="https://app.programmeinsights.co.uk/signup">
                     <Button variant="primary" size="sm" className="w-full">

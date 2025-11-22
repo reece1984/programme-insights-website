@@ -10,8 +10,8 @@ export const ProblemAgitation: React.FC = () => {
     },
     {
       number: '2',
-      title: 'The Career Stakes',
-      description: 'A RED rating doesn\'t just delay your project—it can end careers. You\'ll be explaining to Ministers why you failed, while your reputation takes years to recover.'
+      title: 'The Reputational Damage',
+      description: 'A RED rating doesn\'t just delay your project—it damages reputations and creates years of political fallout. You\'ll be explaining to Ministers why the programme failed, while rebuilding stakeholder confidence takes years.'
     },
     {
       number: '3',

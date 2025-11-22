@@ -6,17 +6,20 @@ export const SolutionOverview: React.FC = () => {
     {
       title: 'PREDICT',
       subtitle: 'Your AI-Powered Crystal Ball',
-      description: 'Know your likely rating 90+ days before reviewers arrive. Our machine learning model, trained on hundreds of reviews, shows you exactly where you stand—updated daily.'
+      timeframe: '(Week 1)',
+      description: 'Know your likely rating 90+ days before reviewers arrive. Upload your evidence and receive your predicted rating within 24 hours. Our machine learning model, trained on hundreds of reviews, shows you exactly where you stand—updated daily.'
     },
     {
       title: 'PREPARE',
       subtitle: 'Evidence That Actually Matters',
-      description: 'Stop guessing what reviewers want. Gateway Success maps your evidence to IPA criteria, showing gaps and staleness. Focus only on what moves you toward GREEN.'
+      timeframe: '(Ongoing)',
+      description: 'Stop guessing what reviewers want. Gateway Success maps your evidence to IPA criteria, showing gaps and staleness. Follow your personalised roadmap and watch your readiness score climb daily. Get alerts when evidence needs refreshing.'
     },
     {
       title: 'PERFORM',
       subtitle: 'Practice Makes Perfect',
-      description: 'Face AI reviewers modeled on real panel archetypes. Practice your defense, refine your answers, and walk into reviews knowing you\'ll succeed.'
+      timeframe: '(90 Days)',
+      description: 'Face AI reviewers modeled on real panel archetypes. Practice your defense, refine your answers, and walk into reviews knowing you\'ll succeed. You\'ve practiced the questions. You\'ve filled the gaps. GREEN is inevitable.'
     }
   ];
 
@@ -35,9 +38,10 @@ export const SolutionOverview: React.FC = () => {
             <div key={index}>
               <div className="mb-4">
                 <h3 className="section-label mb-2">{pillar.title}</h3>
-                <h4 className="heading-sm text-theme-primary mb-4">
+                <h4 className="heading-sm text-theme-primary mb-2">
                   {pillar.subtitle}
                 </h4>
+                <p className="text-gray-600 mb-4">{pillar.timeframe}</p>
               </div>
               <p className="body-base text-gray-700">
                 {pillar.description}

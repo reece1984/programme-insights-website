@@ -26,15 +26,17 @@ export const GatewayHero: React.FC = () => {
             <Button
               variant="primary"
               size="lg"
-              onClick={() => handleCTA('Get Your Free Readiness Score')}
+              onClick={() => handleCTA('Get Your Free Readiness Assessment')}
             >
-              Get Your Free Readiness Score
+              Get Your Free Readiness Assessment
             </Button>
-            <a href="#how-it-works">
-              <Button variant="secondary" size="lg">
-                See How It Works
-              </Button>
-            </a>
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => handleCTA('Watch 2-Minute Demo')}
+            >
+              Watch 2-Minute Demo
+            </Button>
           </div>
 
           {/* Trust Signal */}
